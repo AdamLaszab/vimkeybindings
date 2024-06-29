@@ -1,14 +1,5 @@
-// Place your key binding in this file to override the defaultsauto[]
 [
-  {
-    "key": "ctrl+e ctrl+w",
-    "command": "editor.emmet.action.wrapWithAbbreviation"
-  },
-  {
-    "key": "ctrl+e ctrl+r",
-    "command": "editor.emmet.action.removeTag"
-  },
-  {
+    {
     "key": "ctrl+shift+a",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
@@ -20,18 +11,22 @@
   },
   {
     "key": "ctrl+shift+j",
-    "command": "workbench.action.togglePanel"
-  },
-  {
-    "key": "ctrl+shift+n",
-    "command": "workbench.action.terminal.new",
+    "command": "workbench.action.focusPanel" },
+     { "key": "ctrl+shift+n", "command": "workbench.action.terminal.new", "when": "terminalFocus" }, 
+     { "key": "ctrl+shift+w", "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+w",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus"
+    "key": "ctrl+shift+j",
+    "command":"workbench.action.focusLastEditorGroup",
+    "when": "panelFocus"
   },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.togglePanel",
+  },
+
+  // FILE TREE
   {
     "command": "workbench.action.toggleSidebarVisibility",
     "key": "ctrl+e"
@@ -55,6 +50,11 @@
     "key": "shift+n",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus"
+  },
+  {
+    "key": "shift+n",
+    "command": "workbench.action.terminal.new",
+    "when": "!explorerViewletFocus"
   },
   {
     "command": "deleteFile",
